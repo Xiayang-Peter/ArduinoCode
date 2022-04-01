@@ -1,18 +1,23 @@
-/* Basic example code for MAX7219 LED dot matrix display with Arduino. More info: https://www.makerguides.com */
+/* Example code for scrolling text effect on MAX7219 LED dot matrix display with Arduino. More info: https://www.makerguides.com */
+
 // Include the required Arduino libraries:
 #include <MD_Parola.h>
 #include <MD_MAX72xx.h>
 #include <SPI.h>
+
 // Define hardware type, size, and output pins:
 #define HARDWARE_TYPE MD_MAX72XX::FC16_HW
 #define MAX_DEVICES 4
-#define CS_PIN 12
+#define CS_PIN 3
+
 // Create a new instance of the MD_Parola class with hardware SPI connection:
 MD_Parola myDisplay = MD_Parola(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
+
 // Setup for software SPI:
-// #define DATAPIN 2
+// #define DATA_PIN 2
 // #define CLK_PIN 4
 // MD_Parola myDisplay = MD_Parola(HARDWARE_TYPE, DATA_PIN, CLK_PIN, CS_PIN, MAX_DEVICES);
+
 void setup() {
   // Intialize the object:
   myDisplay.begin();
@@ -20,22 +25,11 @@ void setup() {
   myDisplay.setIntensity(0);
   // Clear the display:
   myDisplay.displayClear();
+  myDisplay.displayText("Scrolling text", PA_CENTER, 100, 0, PA_SCROLL_LEFT, PA_SCROLL_LEFT);
 }
+
 void loop() {
-  myDisplay.setTextAlignment(PA_CENTER);
-  myDisplay.print("Center");
-  delay(2000);
-  myDisplay.setTextAlignment(PA_LEFT);
-  myDisplay.print("Left");
-  delay(2000);
-  myDisplay.setTextAlignment(PA_RIGHT);
-  myDisplay.print("Right");
-  delay(2000);
-  myDisplay.setTextAlignment(PA_CENTER);
-  myDisplay.setInvert(true);
-  myDisplay.print("Invert");
-  delay(2000);
-  myDisplay.setInvert(false);
-  myDisplay.print(1234);
-  delay(2000);
+  if (myDisplay.displayAnimate()) {
+    myDisplay.displayReset();
+  }
 }
