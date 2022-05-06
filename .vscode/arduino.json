@@ -1,6 +1,6 @@
 {
     "configuration": "cpu=atmega328",
     "board": "arduino:avr:nano",
-    "sketch": "Bluetooth-connect\\Bluetooth-connect.ino",
-    "port": "COM4"
+    "sketch": "LED_MARTIX\\LED_MARTIX.ino",
+    "port": "COM3"
 }
