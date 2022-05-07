@@ -20,21 +20,6 @@ void setup() {
   delay(500);
 }
 
-void loop() {
-  while (ble_device.available()){
-    char in_char = ble_device.read();
-    if (int(in_char)!=-1 and int(in_char)!=42){
-      str_ii+=in_char;
-    }
-    if (in_char=='\n'){
-      delay(20);
-      String msg = "Msg: ";
-      msg+=str_ii;
-      ble_device.print(msg);
-      str_ii = "";
-    }
-  }
-}
 
 String ble_cmd(String cmd_str,String desc_str){
   str_ii = "";
@@ -53,4 +38,21 @@ String ble_cmd(String cmd_str,String desc_str){
     }
     str_ii+=in_char;
   }
-}\
+}
+
+
+void loop() {
+  while (ble_device.available()){
+    char in_char = ble_device.read();
+    if (int(in_char)!=-1 and int(in_char)!=42){
+      str_ii+=in_char;
+    }
+    if (in_char=='\n'){
+      delay(20);
+      String msg = "Msg: ";
+      msg+=str_ii;
+      ble_device.print(msg);
+      str_ii = "";
+    }
+  }
+}

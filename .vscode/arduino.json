@@ -1,6 +1,6 @@
 {
     "configuration": "cpu=atmega328",
     "board": "arduino:avr:nano",
-    "sketch": "LED_MARTIX\\LED_MARTIX.ino",
+    "sketch": "BLE-Phone\\BLE-Phone.ino",
     "port": "COM3"
 }
