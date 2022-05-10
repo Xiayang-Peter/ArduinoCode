@@ -1,6 +1,6 @@
 {
     "configuration": "cpu=atmega328",
     "board": "arduino:avr:nano",
-    "sketch": "LED_MARTIX\\LED_MARTIX.ino",
-    "port": "COM3"
+    "sketch": "Ble-Display\\Ble-Display.ino",
+    "port": "COM4"
 }
