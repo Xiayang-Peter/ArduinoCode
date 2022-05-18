@@ -11,11 +11,11 @@ String DisplayContext = "";
 #define MAX_DEVICES 4
 #define CS_PIN 10
 
-MD_Parola myDisplay = MD_Parola(HARDWARE_TYPE, CS_PIN, MAX_DEVICES); //new configuret for display
+//MD_Parola myDisplay = MD_Parola(HARDWARE_TYPE, CS_PIN, MAX_DEVICES); //new configuret for display
 
-// #define DATA_PIN 11             //reserve for software spi pins setting
-// #define CLK_PIN 13
-// MD_Parola matrix = MD_Parola(HARDWARE_TYPE, DATA_PIN, CLK_PIN, CS_PIN, MAX_DEVICES);
+#define DATA_PIN 11             //reserve for software spi pins setting
+#define CLK_PIN 12
+MD_Parola myDisplay = MD_Parola(HARDWARE_TYPE, DATA_PIN, CLK_PIN, CS_PIN, MAX_DEVICES);
 
 
 void setup() {  
@@ -78,11 +78,10 @@ void loop() {
       str_ii = "";
     }
   }
-  ///Serial.println(DisplayContext);
-  ///myDisplay.setTextAlignment(PA_CENTER);                 
-  ///myDisplay.print(DisplayContext);
-  ///delay(2000);
-  ///DisplayContext = "";
+  Serial.println(DisplayContext);
+  DisplayContext = "";
+
+  
   if (myDisplay.displayAnimate()) {
   myDisplay.displayReset();
   }

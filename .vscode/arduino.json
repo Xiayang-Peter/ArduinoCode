@@ -1,6 +1,6 @@
 {
     "configuration": "cpu=atmega328",
     "board": "arduino:avr:nano",
-    "sketch": "Ble-Display\\Ble-Display.ino",
+    "sketch": "TestingCodes\\RTCtime\\RTCtime.ino",
     "port": "COM4"
 }
