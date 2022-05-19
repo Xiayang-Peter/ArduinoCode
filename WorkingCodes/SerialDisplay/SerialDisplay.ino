@@ -1,12 +1,6 @@
-// Use the MD_MAX72XX library to scroll text on the display
-//
-// Demonstrates the use of the callback function to control what
-// is scrolled on the display text.
-//
-// User can enter text on the serial monitor and this will display as a
-// scrolling message on the display.
-// Speed for the display is controlled by a pot on SPEED_IN analog in.
-//
+
+/// all the changes to hardware/hardwarepins will needs to updates to the README//// 
+
 #include <MD_MAX72xx.h>
 #include <SPI.h>
 
@@ -28,7 +22,6 @@
 
 // SPI hardware interface
 //MD_MAX72XX mx = MD_MAX72XX(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
-// Arbitrary pins
 MD_MAX72XX mx = MD_MAX72XX(HARDWARE_TYPE, DATA_PIN, CLK_PIN, CS_PIN, MAX_DEVICES);
 
 // Scrolling parameters

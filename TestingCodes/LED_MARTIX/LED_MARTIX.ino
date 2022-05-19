@@ -1,3 +1,7 @@
+
+/// all the changes to hardware/hardwarepins will needs to updates to the README//// 
+
+
 #include <MD_Parola.h>
 #include <MD_MAX72XX.h>
 #include <SPI.h>

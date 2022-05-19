@@ -1,3 +1,8 @@
+
+/// all the changes to hardware/hardwarepins will needs to updates to the README//// 
+
+
+
 // help menu printout for MLT-BT05
 #include <SoftwareSerial.h>
 

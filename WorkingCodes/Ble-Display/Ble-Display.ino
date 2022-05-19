@@ -1,3 +1,5 @@
+/// all the changes to hardware/hardwarepins will needs to updates to the README//// 
+
 #include <SoftwareSerial.h> //BLUETOOTH
 SoftwareSerial ble_device(3,4);
 String str_ii = "";  //set bleinput value

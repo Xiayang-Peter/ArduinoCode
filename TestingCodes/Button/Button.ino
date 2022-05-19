@@ -1,3 +1,6 @@
+/// all the changes to hardware/hardwarepins will needs to updates to the README//// 
+
+
 const int BUTTON = 8;
 const int LED = 7;
 int BUTTONstate = 0;

@@ -1,4 +1,8 @@
 // Arduino code to read and change CC254x parameters
+
+/// all the changes to hardware/hardwarepins will needs to updates to the README//// 
+
+
 #include <SoftwareSerial.h>
 
 SoftwareSerial ble_device(3,4);
