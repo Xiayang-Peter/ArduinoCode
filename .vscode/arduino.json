@@ -1,6 +1,6 @@
 {
     "configuration": "cpu=atmega328",
     "board": "arduino:avr:nano",
-    "sketch": "TestingCodes\\RTCtime\\RTCtime.ino",
+    "sketch": "WorkingCodes\\SerialDisplay\\SerialDisplay.ino",
     "port": "COM4"
 }
